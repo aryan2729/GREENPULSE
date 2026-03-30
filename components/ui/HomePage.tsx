@@ -313,7 +313,7 @@ export default function HomePage() {
             </div>
 
             {/* Trust line */}
-            <div className="flex items-center justify-center gap-2 text-green-600/50 text-xs mb-12">
+            <div className="flex items-center justify-center gap-2 text-white  text-xs mb-12">
               <Shield size={11} /> No sign-up required &nbsp;·&nbsp; 100% anonymous &nbsp;·&nbsp; Completely free
             </div>
 
