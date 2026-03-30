@@ -28,12 +28,12 @@ function Counter({ end, suffix = '' }: { end: number; suffix?: string }) {
 /* ── Live ticker ── */
 function LiveTicker() {
   const msgs = [
-    '🟢 Lodhi Garden — Only 22% crowd right now. Perfect time to visit!',
-    '🌸 Garden of Five Senses — AQI 55 (Good). Jasmine walk is blooming!',
+    '🟢 Lodhi Garden — Only 22% crowd right now. Perfect time to visit',
+    '🌸 Garden of Five Senses — AQI 55(Good). Jasmine walk is blooming',
     '⚠️ Deer Park — High crowd detected. AI suggests Nehru Park instead.',
-    '🏆 EcoCitizen_4821 just became a Forest Guardian! 2,840 points earned.',
-    '🌅 Early Bird Challenge: Visit before 7am to earn +30 bonus points!',
-    '🌿 New plant added: Peepal tree at Lodhi Garden. Scan QR to earn 20 pts!',
+    '🏆 EcoCitizen_48 just became a Forest Guardian with 2,840 points!',
+    '🌅 Early Bird Challenge: Visit before 7am to earn +30 bonus points',
+    '🌿 New plant added: Peepal tree at Lodhi Garden. Scan QR to earn 20 points',
   ];
   const [idx, setIdx] = useState(0);
   const [vis, setVis] = useState(true);
