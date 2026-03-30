@@ -477,7 +477,7 @@ export default function CitizenPage() {
             <Leaf size={24} className="text-green-400 flex-shrink-0 mt-0.5" />
             <div>
               <h1 className="font-playfair text-3xl text-white mb-0.5">Citizen Hub</h1>
-              <p className="text-green-300/55 text-sm">Your personal park companion — everything you need as a Delhi park citizen.</p>
+              <p className="text-green-300/55 text-sm">Your personal park companion everything you need as a Delhi park citizen.</p>
             </div>
           </div>
         </div>
@@ -509,7 +509,7 @@ export default function CitizenPage() {
             <ParkFinderCard />
             {/* Live status */}
             <div className={`rounded-2xl border p-5 shadow-sm ${t.surface}`}>
-              <SectionHeader emoji="📊" title="Live Park Status" subtitle="All parks right now — click to open on map" />
+              <SectionHeader emoji="📊" title="Live Park Status" subtitle="All parks right now click to open on map" />
               <div className="space-y-2">
                 {parks.map(p => <LiveStatusCard key={p.id} park={p} />)}
               </div>

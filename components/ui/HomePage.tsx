@@ -28,9 +28,9 @@ function Counter({ end, suffix = '' }: { end: number; suffix?: string }) {
 /* ── Live ticker ── */
 function LiveTicker() {
   const msgs = [
-    '🟢 Lodhi Garden — Only 22% crowd right now. Perfect time to visit',
-    '🌸 Garden of Five Senses — AQI 55(Good). Jasmine walk is blooming',
-    '⚠️ Deer Park — High crowd detected. AI suggests Nehru Park instead.',
+    '🟢 Lodhi Garden: Only 22% crowd right now. Perfect time to visit',
+    '🌸 Garden of Five Senses: AQI 55(Good). Jasmine walk is blooming',
+    '⚠️ Deer Park: High crowd detected. AI suggests Nehru Park instead.',
     '🏆 EcoCitizen_48 just became a Forest Guardian with 2,840 points!',
     '🌅 Early Bird Challenge: Visit before 7am to earn +30 bonus points',
     '🌿 New plant added: Peepal tree at Lodhi Garden. Scan QR to earn 20 points',
@@ -291,7 +291,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-green-100/50 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto font-light">
-              Real-time crowd levels, air quality &amp; safety scores for all 900+ DDA parks.
+              Real time crowd levels, air quality &amp; safety scores for all 900+ DDA parks.
               Find your perfect park before you leave home.
             </p>
 
@@ -350,9 +350,9 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
             <div className="hidden md:block absolute top-7 left-[33%] right-[33%] h-px bg-gradient-to-r from-green-200 to-green-200" style={{ backgroundImage: 'repeating-linear-gradient(90deg,#bbf7d0 0px,#bbf7d0 8px,transparent 8px,transparent 16px)' }} />
             {[
-              { n: '1', icon: '📍', title: 'Find Your Park',    desc: 'Browse parks near you. Filter by crowd level, women safety, child-friendliness, or air quality.' },
-              { n: '2', icon: '📊', title: 'Check Live Data',   desc: 'See real-time crowd %, AQI, safety score, and best visiting time — all in one view.' },
-              { n: '3', icon: '🎮', title: 'Visit & Earn',      desc: 'Scan plant QR codes, report issues, complete eco-challenges and earn reward points!' },
+              { n: '1', icon: '📍', title: 'Find Your Park',    desc: 'Browse parks near you. Filter by crowd level, women safety, child friendliness, or air quality.' },
+              { n: '2', icon: '📊', title: 'Check Live Data',   desc: 'See real time crowd %, AQI, safety score, and best visiting time, all in one view.' },
+              { n: '3', icon: '🎮', title: 'Visit & Earn',      desc: 'Scan plant QR codes, report issues, complete eco challenges and earn reward points!' },
             ].map(s => (
               <div key={s.n} className="relative group">
                 <div className="relative w-16 h-16 mx-auto mb-5">
@@ -485,16 +485,16 @@ export default function HomePage() {
           <div className="text-center mb-10">
             <p className="text-green-600 text-xs font-black uppercase tracking-[0.15em] mb-2">Everything In One Place</p>
             <h2 className="font-playfair text-3xl md:text-4xl text-gray-800">What Can You Do Here?</h2>
-            <p className="text-gray-400 text-sm mt-2">Built for every Delhi citizen — simple, free, and anonymous</p>
+            <p className="text-gray-400 text-sm mt-2">Built for every Delhi citizen simple, free, and anonymous</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { e: '🗺️', who: 'For Everyone',      bg: 'from-green-50 to-emerald-50',   border: 'border-green-200',   accent: 'text-green-700',  t: 'Find Your Perfect Park',       d: 'Filter by crowd, air quality, women safety, or child-friendliness. Find the best park right now.', page: 'map' },
+              { e: '🗺️', who: 'For Everyone',      bg: 'from-green-50 to-emerald-50',   border: 'border-green-200',   accent: 'text-green-700',  t: 'Find Your Perfect Park',       d: 'Filter by crowd, air quality, women safety, or child friendliness. Find the best park right now.', page: 'map' },
               { e: '🌿', who: 'Nature Lovers',       bg: 'from-teal-50 to-cyan-50',       border: 'border-teal-200',    accent: 'text-teal-700',   t: 'Discover Plants & Trees',       d: 'Scan QR codes on trees. Learn names, CO₂ absorbed, health benefits, and ecological fun facts.', page: 'citizen' },
-              { e: '🛡️', who: 'Women & Families',   bg: 'from-purple-50 to-violet-50',   border: 'border-purple-200',  accent: 'text-purple-700', t: 'Safety First',                  d: 'Check safety scores, see well-lit routes, use SOS in emergencies. Identity always protected.', page: 'citizen' },
-              { e: '🎮', who: 'All Citizens',        bg: 'from-amber-50 to-yellow-50',    border: 'border-amber-200',   accent: 'text-amber-700',  t: 'Earn Reward Points',            d: 'Visit parks, complete eco-challenges, report issues. Earn points and redeem with local partners.', page: 'rewards' },
-              { e: '💬', who: 'Community',           bg: 'from-blue-50 to-indigo-50',     border: 'border-blue-200',    accent: 'text-blue-700',   t: 'Share Tips & Events',           d: 'Post nature photos, share park tips, announce yoga groups. Fully anonymous — no account needed.', page: 'community' },
-              { e: '📊', who: 'DDA / Managers',      bg: 'from-red-50 to-rose-50',        border: 'border-red-200',     accent: 'text-red-700',    t: 'Admin Intelligence',            d: 'Real-time footfall, AI-driven suggestions, anonymous citizen reports, and safety alerts.', page: 'admin' },
+              { e: '🛡️', who: 'Women & Families',   bg: 'from-purple-50 to-violet-50',   border: 'border-purple-200',  accent: 'text-purple-700', t: 'Safety First',                  d: 'Check safety scores, see well lit routes, use SOS in emergencies. Identity always protected.', page: 'citizen' },
+              { e: '🎮', who: 'All Citizens',        bg: 'from-amber-50 to-yellow-50',    border: 'border-amber-200',   accent: 'text-amber-700',  t: 'Earn Reward Points',            d: 'Visit parks, complete eco challenges, report issues. Earn points and redeem with local partners.', page: 'rewards' },
+              { e: '💬', who: 'Community',           bg: 'from-blue-50 to-indigo-50',     border: 'border-blue-200',    accent: 'text-blue-700',   t: 'Share Tips & Events',           d: 'Post nature photos, share park tips, announce yoga groups. Fully anonymous no account needed.', page: 'community' },
+              { e: '📊', who: 'DDA / Managers',      bg: 'from-red-50 to-rose-50',        border: 'border-red-200',     accent: 'text-red-700',    t: 'Admin Intelligence',            d: 'Real time footfall, AI driven suggestions, anonymous citizen reports, and safety alerts.', page: 'admin' },
             ].map(f => (
               <div
                 key={f.t}
@@ -546,7 +546,7 @@ export default function HomePage() {
           <div className="flex-1">
             <h3 className="font-black text-red-700 text-xl mb-2">Need Help in a Park?</h3>
             <p className="text-red-500/80 text-sm leading-relaxed">
-              Our one-tap SOS button instantly alerts park security with your location. No login, no form — just one press.
+              Our one tap SOS button instantly alerts park security with your location. No login, no form — just one press.
               Your identity stays completely protected even when sending SOS.
             </p>
           </div>
