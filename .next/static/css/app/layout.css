@@ -1707,9 +1707,17 @@ video {
 .fill-amber-400{
   fill: #fbbf24;
 }
+.object-contain{
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
+}
+.object-center{
+  -o-object-position: center;
+     object-position: center;
 }
 .p-1{
   padding: 0.25rem;
@@ -2162,9 +2170,6 @@ video {
   --tw-text-opacity: 1;
   color: rgb(45 122 79 / var(--tw-text-opacity, 1));
 }
-.text-green-600\/50{
-  color: rgb(45 122 79 / 0.5);
-}
 .text-green-700{
   --tw-text-opacity: 1;
   color: rgb(31 92 56 / var(--tw-text-opacity, 1));
@@ -2392,6 +2397,17 @@ video {
 .outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+.ring-1{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+.ring-green-800\/15{
+  --tw-ring-color: rgb(26 61 40 / 0.15);
+}
+.ring-green-900\/40{
+  --tw-ring-color: rgb(13 40 24 / 0.4);
 }
 .blur-\[100px\]{
   --tw-blur: blur(100px);
@@ -2816,6 +2832,14 @@ input, textarea, select, button { font-family: 'Outfit', sans-serif; }
 .group:hover .group-hover\:bg-green-600{
   --tw-bg-opacity: 1;
   background-color: rgb(45 122 79 / var(--tw-bg-opacity, 1));
+}
+.group:hover .group-hover\:bg-gray-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+}
+.group:hover .group-hover\:bg-gray-800{
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
 }
 .group:hover .group-hover\:text-green-300{
   --tw-text-opacity: 1;

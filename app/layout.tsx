@@ -3,8 +3,13 @@ import 'leaflet/dist/leaflet.css';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'GreenPulse — Smart Parks for Delhi',
+  title: 'Green Pulse — Smart Parks for Delhi',
   description: 'Intelligent citizen-centric platform for public green spaces in Delhi',
+  icons: {
+    icon: '/green-pulse.png',
+    shortcut: '/green-pulse.png',
+    apple: '/green-pulse.png',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

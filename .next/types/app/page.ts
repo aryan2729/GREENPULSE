@@ -1,4 +1,4 @@
-// File: /Users/shreejikrishna29/Desktop/greenpulse/app/page.tsx
+// File: /Users/shreejikrishna29/Desktop/projects /My web d projects /greenpulse/app/page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

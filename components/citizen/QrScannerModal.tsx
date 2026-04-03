@@ -68,7 +68,7 @@ export default function QrScannerModal({ open, onClose, onScannedPlantId, darkMo
                   onClose();
                   return;
                 } else {
-                  setErr('QR detected, but it is not a GreenPulse plant code.');
+                  setErr('QR detected, but it is not a Green Pulse plant code.');
                 }
               }
             }

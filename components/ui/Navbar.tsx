@@ -2,6 +2,7 @@
 import { useStore, PageId } from '@/store/useStore';
 import { Map, Trophy, LayoutDashboard, Leaf, AlertCircle, MessageCircle, Home, Moon, Sun, Shield } from 'lucide-react';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Navbar() {
   const { activePage, setActivePage, alias, points, isAnonymous, setShowSOS, darkMode, toggleDarkMode, _hydrated } = useStore();
@@ -16,7 +17,14 @@ export default function Navbar() {
     { id: 'admin',     label: 'Admin',     icon: <LayoutDashboard size={14} /> },
   ];
 
-  const go = (id: PageId) => { setActivePage(id); setMobileOpen(false); };
+  const go = (id: PageId) => {
+    setActivePage(id);
+    setMobileOpen(false);
+    // Logo/home click should always bring user to the top.
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   // Light mode navbar must work on light pages (no white-on-white).
   const navBg = darkMode
@@ -40,13 +48,21 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between gap-3">
 
           {/* Logo */}
-          <button onClick={() => go('home')} className="flex items-center gap-2 flex-shrink-0 group">
-            <div className={`w-8 h-8 rounded-xl transition-colors flex items-center justify-center shadow-lg
-              ${darkMode ? 'bg-green-600 group-hover:bg-green-500 shadow-green-900/40' : 'bg-green-700 group-hover:bg-green-600 shadow-green-900/10'}`}>
-              <span className="text-white text-base">🌿</span>
+          <button onClick={() => go('home')} className="flex items-center gap-2.5 flex-shrink-0 group">
+            <div className={`w-11 h-11 rounded-2xl transition-all flex items-center justify-center overflow-hidden shadow-lg
+              ${darkMode ? 'ring-1 ring-green-900/40 shadow-green-900/40' : 'ring-1 ring-green-800/15 shadow-green-900/10'}`}>
+              <Image
+                src="/green-pulse.png"
+                alt="Green Pulse logo"
+                width={44}
+                height={44}
+                className="w-full h-full object-cover object-center"
+                quality={100}
+                priority
+              />
             </div>
             <div className="flex flex-col leading-none">
-              <span className={`${darkMode ? 'text-white' : 'text-gray-900'} font-black text-[15px] tracking-tight`}>GreenPulse</span>
+              <span className={`${darkMode ? 'text-white' : 'text-gray-900'} font-black text-[15px] tracking-tight`}>Green Pulse</span>
               <span className={`${darkMode ? 'text-green-600' : 'text-green-700'} text-[9px] font-bold tracking-widest`}>DELHI SMART PARKS</span>
             </div>
           </button>

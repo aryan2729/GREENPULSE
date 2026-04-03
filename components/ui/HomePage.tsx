@@ -3,6 +3,7 @@ import { useStore } from '@/store/useStore';
 import { parks, plants } from '@/data/parks';
 import { Shield, Map, ChevronRight, Star, Phone, Leaf, Wind, Users, TreePine, Droplets, Sun, Bird, Flower2 } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 
 /* ── Animated counter ── */
 function Counter({ end, suffix = '' }: { end: number; suffix?: string }) {
@@ -346,7 +347,7 @@ export default function HomePage() {
       <section className="py-16 px-6 bg-white border-b border-gray-100">
         <div className="max-w-4xl mx-auto text-center ">
           <p className="text-green-600 text-xs font-black uppercase tracking-[0.15em] mb-3">Simple as 1‑2‑3</p>
-          <h2 className="font-playfair text-3xl md:text-4xl text-gray-800 mb-12">How GreenPulse Works</h2>
+          <h2 className="font-playfair text-3xl md:text-4xl text-gray-800 mb-12">How Green Pulse Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
             <div className="hidden md:block absolute top-7 left-[33%] right-[33%] h-px bg-gradient-to-r from-green-200 to-green-200" style={{ backgroundImage: 'repeating-linear-gradient(90deg,#bbf7d0 0px,#bbf7d0 8px,transparent 8px,transparent 16px)' }} />
             {[
@@ -573,7 +574,7 @@ export default function HomePage() {
           <h2 className="font-playfair text-4xl text-white mb-4">Ready to Explore Delhi's Parks?</h2>
           <p className="text-green-300/50 mb-8 leading-relaxed">
             Free · Anonymous · Smart · Built for every Delhi citizen.<br />
-            Join 8,420+ citizens already using GreenPulse.
+            Join 8,420+ citizens already using Green Pulse.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <button
@@ -599,8 +600,15 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-2xl">🌿</span>
-                <span className="text-green-400 font-black text-lg">GreenPulse</span>
+                <Image
+                  src="/green-pulse.png"
+                  alt="Green Pulse logo"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded-xl object-cover object-center ring-1 ring-green-900/40"
+                  quality={100}
+                />
+                <span className="text-green-400 font-black text-lg">Green Pulse</span>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Intelligent citizen platform for Delhi's public green spaces. Built for DDA Greens Innovation Challenge 2025.
@@ -634,7 +642,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="border-t border-gray-900 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
-            <div className="text-gray-600 text-xs">© 2025 GreenPulse · DDA Greens Innovation Challenge</div>
+            <div className="text-gray-600 text-xs">© 2025 Green Pulse · DDA Greens Innovation Challenge</div>
             <div className="text-gray-600 text-xs">Privacy First · Open Platform · Anonymous by Default · Free Forever</div>
           </div>
         </div>
